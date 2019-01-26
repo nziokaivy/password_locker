@@ -53,7 +53,7 @@ class TestCredential(unittest.TestCase):
         Test to check if we can find credential by name and return credential.
         """
         self.new_credential.save_credentials()
-        new_test_credential = Credentials("Instagram", "1122")
+        new_test_credential = Credential("Instagram", "1122")
         new_test_credential.save_credentials()
 
         found_credential = Credential.find_by_name("Instagram")
