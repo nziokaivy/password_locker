@@ -30,21 +30,30 @@ class Account_user:
 
 
 
-# class Password:
-#     """
-#     Class that generates new instances of passwords
-#     """
+class Credential:
+    """
+    Class that create account credentials ,save the information and generate passwords.
+    """
+    credentials_list = []
+    user_credentials_list = []
 
-#     def __init__(self,account_name,first_name,email_address,phone_number,password):
+    @classmethod
+    def find_user(cls,first_name,password):
+        '''
+        Method that checks if the name and password entered matches the saved accounts in the users_list 
 
-#         '''
-#         __init__ method that helps us define properties for our objects.
+        Args:
+            first_name: user name to search for
+            password : user password to search for
 
-#         Args:
-#             account_name: New account name password is for.
-#             name : New contact last name.
-#             number: New contact phone number.
-#             email : New contact email address.
-#         '''
+        Returns :
+            user that matches the first name and password.
+        '''
+        current_user = ''
+        for user in cls.users_list:
+            if (user.first_name == firsts_name and user.password == password):
+                current
+                return current_user = user.first_name
 
 
+    
