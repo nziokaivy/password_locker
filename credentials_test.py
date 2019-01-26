@@ -60,16 +60,11 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(found_credential.account_name, new_test_credential.account_name)
 
-    # def test_display_credentials(self):
-	# 	'''
-	# 	Test to check if the display_credentials method, displays the correct credentials.
-	# 	'''
-	# 	self.new_credential.save_credentials()
-	# 	twitter = Credential('Jane','Twitter','maryjoe','pswd100')
-	# 	twitter.save_credentials()
-	# 	gmail = Credential('Jane','Gmail','maryjoe','pswd200')
-	# 	gmail.save_credentials()
-	# 	self.assertEqual(len(Credential.display_credentials(twitter.user_name)),2)
+    def test_display_all_credentials(self):
+        """
+        TestCase to test whether all contacts can be displayed
+        """
+        self.assertEqual(Credential.display_credentials(), Credential.credentials_list)
 
     # def test_copy_credential(self):
 	# 	'''
