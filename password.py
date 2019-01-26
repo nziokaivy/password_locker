@@ -23,7 +23,7 @@ class Account_user:
     def save_user(self):
 
         '''
-        Method to save user account objects into users_list
+        Method to save new user account objects into users_list
         '''
 
         Account_user.users_list.append(self)     
