@@ -49,11 +49,12 @@ class Credential:
         Returns :
             user that matches the first name and password.
         '''
-        current_user = ''
+        found_user = ''
         for user in cls.users_list:
             if (user.first_name == firsts_name and user.password == password):
-                current
-                return current_user = user.first_name
+                found_user = user.first_name
+                return found_user
 
+                
 
     
