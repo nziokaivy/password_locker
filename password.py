@@ -20,6 +20,14 @@ class Account_user:
         self.first_name = first_name
         self.password = password
 
+    def save_user(self):
+
+        '''
+        Method to save user account objects into users_list
+        '''
+
+        Account_user.users_list.append(self)     
+
 
 
 # class Password:
