@@ -8,3 +8,10 @@ class TestAccount_user(unittest.TestCase):
     Args:
         unittest.TestCase: TestCase class that helps in creating tets cases
     '''    
+
+    defsetUp(self):
+    '''
+    Set up method to run before each test cases.
+    '''
+    self.new_account = Account_user("Ivy","Muffins001")
+    

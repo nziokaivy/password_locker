@@ -31,7 +31,7 @@ class Password:
 
         Args:
             account_name: New account name password is for.
-            _name : New contact last name.
+            name : New contact last name.
             number: New contact phone number.
             email : New contact email address.
         '''
