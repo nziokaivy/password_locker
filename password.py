@@ -13,8 +13,8 @@ class Account_user:
         Method that helps us define properties that each user account will have
     
         Args:
-          first_name : account user name
-          password : account password
+          first_name :  main account user name
+          password :  main account password
         '''
 
         self.first_name = first_name
@@ -30,31 +30,5 @@ class Account_user:
 
 
 
-class Credential:
-    """
-    Class that create account credentials ,save the information and generate passwords.
-    """
-    credentials_list = []
-    user_credentials_list = []
-
-    @classmethod
-    def find_user(cls,first_name,password):
-        '''
-        Method that checks if the name and password entered matches the saved accounts in the users_list 
-
-        Args:
-            first_name: user name to search for
-            password : user password to search for
-
-        Returns :
-            user that matches the first name and password.
-        '''
-        found_user = ''
-        for user in cls.users_list:
-            if (user.first_name == firsts_name and user.password == password):
-                found_user = user.first_name
-                return found_user
-
-                
-
-    
+if __name__ == '__main__':
+    main()
