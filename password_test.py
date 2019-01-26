@@ -15,7 +15,7 @@ class TestAccount_user(unittest.TestCase):
         '''
         self.new_account = Account_user("Ivy","Muffins01")
 
-     def tearDown(self):
+    def tearDown(self):
             '''
             Method that cleans up after each test case has run.
             '''
@@ -40,7 +40,7 @@ class TestAccount_user(unittest.TestCase):
 
     def test_save_multiple_user(self):
             '''
-            test_save_multiple_user to check if we can save multiple contact
+            Method to check if we can save multiple accounts
             objects to our users_list
             '''
             self.new_account.save_user()
