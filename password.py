@@ -1,4 +1,4 @@
-import pyperclip
+# import pyperclip
 import random
 class Account_user:
     """
@@ -7,7 +7,18 @@ class Account_user:
 
     users_list = []
 
-    # def__init__(self,first_name,password)
+    def __init__(self,first_name,password):
+    
+        '''
+        Method that helps us define properties that each user account will have
+    
+        Args:
+          first_name : account user name
+          password : account password
+        '''
+
+
+
 class Password:
     """
     Class that generates new instances of passwords
