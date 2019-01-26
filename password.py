@@ -1,4 +1,3 @@
-# import pyperclip
 import random
 class Account_user:
     """

@@ -22,7 +22,12 @@ class Credential:
         """
         self.credentials_list.append(self)
     
-        
+    def delete_credential(self):
+        """
+        Method which deletes a particular credential
+        """
+        Credential.credentials_list.remove(self)
+
 
                 
 
