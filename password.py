@@ -17,23 +17,26 @@ class Account_user:
           password : account password
         '''
 
+        self.first_name = first_name
+        self.password = password
 
 
-class Password:
-    """
-    Class that generates new instances of passwords
-    """
 
-    def __init__(self,account_name,first_name,email_address,phone_number,password):
+# class Password:
+#     """
+#     Class that generates new instances of passwords
+#     """
 
-        '''
-        __init__ method that helps us define properties for our objects.
+#     def __init__(self,account_name,first_name,email_address,phone_number,password):
 
-        Args:
-            account_name: New account name password is for.
-            name : New contact last name.
-            number: New contact phone number.
-            email : New contact email address.
-        '''
+#         '''
+#         __init__ method that helps us define properties for our objects.
+
+#         Args:
+#             account_name: New account name password is for.
+#             name : New contact last name.
+#             number: New contact phone number.
+#             email : New contact email address.
+#         '''
 
 
