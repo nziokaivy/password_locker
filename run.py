@@ -23,5 +23,23 @@ def find_credential(account_name):
     """
     return Credential.find_by_name(account_name)
 
-    
+def check_existing_credentials(name):
+    """
+    Method that checks whether a particular account and its credentials exist when searched using the account_name"""
+    return Credential.find_by_name(name)  
+
+def delete_credential(credentials):
+    """
+    Method that deletes credentials
+    """
+    return Credential.delete_credential(credentials)
+
+
+def display_credentials():
+    """
+    Function which displays all saved credentials
+    """
+    return Credential.display_credentials()    
+
+
    
