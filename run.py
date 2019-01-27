@@ -86,13 +86,43 @@ def main():
                     print('\n')
 
             while True:
-                    print("1: View saved aacounts")
-                    print("2: Add new account")
-                    print("3: Remove credentials")
-                    print("4: Search credentials")
+                    print("1: Add new credential")
+                    print("2: View saved credentials")
+                    print("3: Remove credential")
+                    print("4: Search credential")
                     print("5: Log Out")
                     option = input()
-                    
+
+                    if option == '1':
+                        while True:
+                            print("Continue to add? y/n")
+
+                            choice = input().lower()
+                            if choice == 'y':
+                                print("Enter The Account Name")
+                                account_name = input()
+                                print("Enter a password")
+                                print(
+                                    "To generate random password enter keyword 'genpass' or 'newpass' to create your own password")
+                                keyword = input().lower()
+
+                                if keyword == 'gp':
+                                    account_password = generate_password()
+                                    print(f"Account: {account_name}")
+                                    print(f"Password: {account_password}")
+                                    print('\n')
+
+                                elif keyword == 'n':
+                                    print("Create your password")
+                                    account_password = input()
+                                    print(f"Account: {account_name}")
+                                    print(f"Password: {account_password}")
+                                    print('\n')
+
+                            elif choice == 'n':
+                                break
+                            else:
+                                print("Please use 'y' for yes or 'n' for no!")
 
                     
     
