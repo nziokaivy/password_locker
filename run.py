@@ -124,6 +124,22 @@ def main():
                             else:
                                 print("Please use 'y' for yes or 'n' for no!")
 
+                        elif option == '2':
+                        while True:
+                            print("Here are all your credentials")
+                            
+                            if display_credentials():
+
+                                for credential in display_credentials():
+                                    print(f"Account Name:{credential.account_name}")
+                                    print(f"Password:{credential.account_password}")
+
+                            else:
+                                print('\n')
+                                print("You don't seem to have any credentials yet")
+                                print('\n')
+
+                            
                     
     
                 
