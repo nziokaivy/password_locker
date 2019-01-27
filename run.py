@@ -180,6 +180,50 @@ def main():
                             else:
                                 print("Please enter a valid code")
 
+                        elif option == '5':
+                        print("Are you sure? y/n")
+                        logout = input().lower()
+
+                        if logout == 'y':
+                            print("You have Successfully logged out")
+                            break
+                        elif logout == 'n':
+                            continue
+
+                elif short_code == 'lg':
+                    print("WELCOME")
+                    print("Enter Your Username")
+                    default_user_name = input()
+
+                    print("Enter Your password")
+                    default_user_password = input()
+                    print('\n')  
+
+                    while default_user_name != 'testuser' or default_user_password != '12345':
+                print("Wrong userName or password. Username 'testuser' and password '12345'")
+                print("Enter UserName")
+                default_user_name = input()
+
+                print("Enter Your password")
+                default_user_password = input()
+
+                print('\n')
+
+            if default_user_name == 'testuser' and default_user_password == '12345':
+                print("YOU HAVE SUCCESSFULLY LOGGED IN!")
+                print('\n')
+                print("Select an option below to continue: Enter 1, 2, 3, 4 or 5")
+                print('\n')
+
+            while True:
+                print("1: View Your saved credentials")
+                print("2: Add new credentials")
+                print("3: Remove credentials")
+                print("4: Search credentials")
+                print("5: Log Out")
+                option = input()     
+        
+
                    
         
 
