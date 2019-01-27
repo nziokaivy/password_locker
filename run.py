@@ -160,7 +160,27 @@ def main():
                             else:
                                 print("Entered credential doesn't exist")
                                 break
-                                
+
+                        elif option == '4':
+                        while True:
+                            print("Continue? y/n")
+                            option2 = input().lower()
+                            if option1 == 'y':
+                                print("Enter credential name you are searching for")
+
+                                search_account= input()
+
+                                if check_existing_credentials(search_account):
+                                    search_credential = find_credential(search_account)
+                                    print(f"Account Name: {search_credential.account_name} \n Password: {search_credential.account_password}")
+                                else:
+                                    print("Entered credential doesn't exist")
+                            elif option1 == 'n':
+                                break
+                            else:
+                                print("Please enter a valid code")
+
+                   
         
 
                             
