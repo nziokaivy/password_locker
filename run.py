@@ -127,7 +127,7 @@ def main():
                         elif option == '2':
                         while True:
                             print("Here are all your credentials")
-                            
+
                             if display_credentials():
 
                                 for credential in display_credentials():
@@ -138,6 +138,30 @@ def main():
                                 print('\n')
                                 print("You don't seem to have any credentials yet")
                                 print('\n')
+
+                        elif option == '3':
+                        while True:
+                            print("Search for credential to delete")
+
+                            search_name = input()
+
+                            if check_existing_credentials(search_name):
+                                search_credential = find_credential(search_name)
+                                print(f"Account Name: {search_credential.account_name} \n Password: {search_credential.account_password}")
+                                print("Delete? y/n")
+                                yes = input().lower()
+                                if yes == 'y':
+                                    delete_credential(search_credential)
+                                    print(f"{search_credential.account_name} Your credential is deleted")
+                                    break
+                                elif yes == 'n':
+                                    continue
+
+                            else:
+                                print("Entered credential doesn't exist")
+                                break
+                                
+        
 
                             
                     
