@@ -1,3 +1,6 @@
+import random
+import string
+
 class Credential:
     """
     Class that create account credentials ,save the information and generate passwords.
@@ -61,7 +64,16 @@ class Credential:
         """
         Method which displays all current credentials
         """
-        return cls.credentials_list    
+        return cls.credentials_list
+
+    def generate_password(stringLength=10,char= string.ascii_letters+string.digits):
+      '''
+      Method which generates password for credentials
+      '''
+
+      gen_pass = ''.join(random.choice(char) for i in range(stringLength))
+      return gen_pass    
+
 
                 
 

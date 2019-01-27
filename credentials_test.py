@@ -24,7 +24,7 @@ class TestCredential(unittest.TestCase):
             Credential.credentials_list = []
 
 
-    def test_credentials(self):
+    def test_init(self):
         """
         Method that tests whether the new_credentials have been instantiated correctly
         """
@@ -65,6 +65,18 @@ class TestCredential(unittest.TestCase):
         TestCase to test whether all contacts can be displayed
         """
         self.assertEqual(Credential.display_credentials(), Credential.credentials_list)   
+
+    def test_delete_credential(self):
+            '''
+            This to test if we can remove an account from our credential list
+            '''
+            self.new_credential.save_credentials()
+            test_credential = Credential("Test","cred123") 
+            test_credential.save_credential()
+
+            self.new_credential.delete_credential()
+            self.assertEqual(len(Credentials.credential_list),1)
+    
 
 if __name__ == '__main__':
     unittest.main()        
