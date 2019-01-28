@@ -72,10 +72,21 @@ class TestCredential(unittest.TestCase):
             '''
             self.new_credential.save_credentials()
             test_credential = Credential("Test","cred123") 
-            test_credential.save_credential()
+            test_credential.save_credentials()
 
             self.new_credential.delete_credential()
-            self.assertEqual(len(Credentials.credential_list),1)
+            self.assertEqual(len(Credential.credentials_list),1)
+
+    def test_credential_exists(self):
+        '''
+        This test is to check if credentials exists when searched with the user_account
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential("Twitter","test12")
+        test_credential.save_credential()
+        credential_exists = Credential.credential_exists("Twitter", "test12"))
+
+        self.assertTrue(credential_exists)        
     
 
 if __name__ == '__main__':

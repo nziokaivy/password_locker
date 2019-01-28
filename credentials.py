@@ -19,7 +19,7 @@ class Credential:
 
     credentials_list = []    
 
-    def save_credentials(self):
+    def save_credential(self):
         """
         Method to save credential objects into credentials_list
         """
@@ -51,7 +51,8 @@ class Credential:
         Method to check whether a credential exists
         Args:
         name: name of account to search whether it exists
-        boolean: True or False depending if the contatc exists
+        boolean: True or False depending if the credential exists
+        
         """
 
         for credential in cls.credentials_list:
@@ -67,11 +68,12 @@ class Credential:
         return cls.credentials_list
 
     def generate_password(stringLength=10,char= string.ascii_letters+string.digits):
-      '''
+      """
       Method which generates password for credentials
-      '''
+      """
 
-      gen_pass = ''.join(random.choice(char) for i in range(stringLength))
+      gen_pass = ''.join(random.choice(char)
+       for i in range(stringLength))
       return gen_pass    
 
 
