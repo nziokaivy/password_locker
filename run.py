@@ -25,11 +25,11 @@ def del_userAccount(user):
     '''
     user.delete_user()
 
-def create_new_credential(account_name, account_password):
+def create_new_credential(site_name, account_name, account_password):
     '''
     Function that creates a new account and its credentials
     '''
-    new_credential = Credential(account_name, account_password)
+    new_credential = Credential(site_name,account_name, account_password)
     return new_credential
 
 def save_new_credential(credentials):
@@ -127,6 +127,7 @@ def main():
 
     while True:
         print("Use these short codes to select an option: Create New User use 'cn': Login to your account use 'lg' or 'ex' to exit password locker")
+        print("Select an option below to continue:")
         short_code = input().lower()
         
         if short_code == 'cn':

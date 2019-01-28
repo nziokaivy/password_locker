@@ -28,6 +28,7 @@ class TestCredential(unittest.TestCase):
         """
         Method that tests whether the new_credentials have been instantiated correctly
         """
+        
         self.assertEqual(self.new_credential.account_name, "Instagram")
         self.assertEqual(self.new_credential.account_password, "1122")  
  
@@ -35,6 +36,7 @@ class TestCredential(unittest.TestCase):
         """
         Method that tests whether the new created credential has been saved
         """
+        
         self.new_credential.save_credentials()
         self.assertEqual(len(Credential.credentials_list), 1)
 

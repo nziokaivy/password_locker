@@ -13,7 +13,7 @@ class Credential:
           account_name : account user name
           account_password : account password
         '''
-
+        
         self.account_name = account_name
         self.account_password = account_password
 
@@ -76,7 +76,7 @@ class Credential:
        for i in range(stringLength))
       return gen_pass    
 
-
+    
                 
 
     
